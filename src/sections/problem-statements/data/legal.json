@@ -1,0 +1,74 @@
+{
+  "name": "Legal",
+  "code": "LEGAL",
+  "problems": [
+    {
+      "problemNum": "01",
+      "name": "Categorizing Unstructured Grassroots Communications",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Overview"
+        },
+        {
+          "type": "paragraph",
+          "text": "National civic platforms and NGOs regularly collect millions of written grievances, feedback reports, and survey responses from citizens across the country. This includes submissions from highly remote, marginalized, and rural communities."
+        },
+        {
+          "type": "heading",
+          "text": "The Problem"
+        },
+        {
+          "type": "paragraph",
+          "text": "During mass data collection, geographic and demographic tags are frequently lost or unrecorded. Organizations are left with a massive, jumbled database of raw text messages. Because citizens write these submissions using hundreds of different localized dialects, informal styles, and regional variations, centralized teams cannot process or understand them. If a centralized system does not know which specific community or region a message belongs to, it cannot forward that message to the correct local office for resolution."
+        },
+        {
+          "type": "heading",
+          "text": "The Challenge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Develop a system capable of analyzing a massive, unorganized database of diverse text submissions and accurately grouping them by their specific regional or community origin based solely on the written content. The solution must be highly accurate even when handling obscure local dialects, informal typing, misspellings, and mixed vocabularies."
+        },
+        {
+          "type": "heading",
+          "text": "Expected Impact"
+        },
+        {
+          "type": "paragraph",
+          "text": "A successful solution will allow organizations to automatically route jumbled grassroots communications to the appropriate local experts, ensuring that data from even the most underrepresented communities is properly sorted and understood."
+        }
+      ]
+    },
+    {
+      "problemNum": "02",
+      "name": "Streamlining Court Document Review and Organization",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "The Problem"
+        },
+        {
+          "type": "paragraph",
+          "text": "Every day, courts across India generate thousands of pages of judgments, orders, and daily filings. These documents are incredibly long and written in dense, complex legal English. Currently, court clerks, young lawyers, and everyday citizens must spend hours manually reading through massive text files just to figure out the basic nature of a case (e.g., is it a civil dispute or a criminal matter?), identify the key people involved, or find the specific laws being debated. This manual reading process creates a massive bottleneck and slows down the entire justice system."
+        },
+        {
+          "type": "heading",
+          "text": "The Goal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build a software tool that can instantly \"read\" a raw, multipage Indian court document and automatically organize it. When a user uploads a court document, the system should instantly label what kind of case it is and highlight the most important details (such as the names of the parties, the specific legal acts mentioned, and the final outcome) without a human having to read it first."
+        },
+        {
+          "type": "heading",
+          "text": "The Challenge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Legal English is completely different from everyday English. A basic search tool that just looks for standard keywords will fail because court documents use unique phrasing, Latin terms, and complex sentence structures inherited from older legal traditions. Your solution must be able to comprehend the specific context and vocabulary of professional legal writing in order to accurately organize the documents."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "name": "Fintech",
+  "code": "FINTECH",
+  "problems": [
+    {
+      "problemNum": "01",
+      "name": "Automated Corporate Risk Radar",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Background"
+        },
+        {
+          "type": "paragraph",
+          "text": "Financial analysts spend hours reading hundreds of public regulatory complaints, earnings call transcripts, and news items to spot companies heading into trouble. Most of this material is unstructured and noisy, and the few items that signal serious legal or operational risk are easy to miss. By the time a pattern is noticed, the risk may already have escalated."
+        },
+        {
+          "type": "heading",
+          "text": "Challenge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build an Automated Corporate Risk Radar: an end-to-end system that takes a continuous stream of raw complaint and news text, identifies what is genuinely high-risk, and shows analysts in real time how each company’s risk profile is changing and why."
+        },
+        {
+          "type": "heading",
+          "text": "Expected Capabilities"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ingest a continuous stream of unstructured news and complaint text about multiple companies.",
+            "Flag items that point to serious legal, operational, or compliance threats, and separate them from general noise.",
+            "Compute a rolling Corporate Risk Index for each company that moves as new information arrives.",
+            "Explain in plain language why a company’s risk is rising, supported by relevant context from that company’s history.",
+            "Display a live Risk Scoreboard dashboard covering five target companies."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Desired Outcome"
+        },
+        {
+          "type": "paragraph",
+          "text": "An analyst can open one screen, see which companies are becoming riskier, and understand the reasons within seconds, without reading the underlying documents."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation Focus"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Area",
+            "What judges look for"
+          ],
+          "rows": [
+            [
+              "Detection quality",
+              "How well high-risk items are separated from routine or irrelevant text"
+            ],
+            [
+              "Context and explanation",
+              "Whether a newly flagged risk comes with accurate, history-aware reasoning"
+            ],
+            [
+              "Risk index design",
+              "Whether the index is meaningful, responsive, and easy to interpret"
+            ],
+            [
+              "Dashboard and usability",
+              "Clarity, live updating, and how quickly an analyst can act on it"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "problemNum": "02",
+      "name": "Peer-to-Peer Micro-Lending Matchmaker",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Background"
+        },
+        {
+          "type": "paragraph",
+          "text": "Traditional banks often turn down small-business and individual micro-loans. Peer-to-peer lending platforms fill that gap by letting everyday people lend small amounts directly to borrowers in return for interest. The difficulty is matching: investors differ widely in how much they can invest, what return they want, and how much risk they will accept, while borrowers differ widely in how likely they are to repay. Matching them by hand is slow and inconsistent."
+        },
+        {
+          "type": "heading",
+          "text": "Challenge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build an Automated P2P Micro-Lending Matchmaker that takes an investor’s preferences and instantly ranks the open borrower listings from best to worst fit, balancing risk against expected return."
+        },
+        {
+          "type": "heading",
+          "text": "Expected Capabilities"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Accept an investor’s parameters, including their risk appetite and the amount they want to invest.",
+            "Rank all open borrower listings from best to worst fit for that investor.",
+            "Recommend the top five borrowers the investor should fund, each with an estimated Return on Investment (ROI).",
+            "Update live: when the investor changes either input, the recommendations refresh immediately.",
+            "Present this through an interactive interface with adjustable controls for risk appetite and investment amount."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Desired Outcome"
+        },
+        {
+          "type": "paragraph",
+          "text": "An investor can change their risk appetite or investment amount and instantly see which borrowers to fund, with a clear sense of expected return and risk."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation Focus"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Area",
+            "What judges look for"
+          ],
+          "rows": [
+            [
+              "Match quality",
+              "Whether rankings change logically as risk appetite and amount change"
+            ],
+            [
+              "Risk and return balance",
+              "How sensibly the solution weighs likelihood of repayment against expected return"
+            ],
+            [
+              "Responsiveness",
+              "How quickly and smoothly recommendations update"
+            ],
+            [
+              "Interpretability",
+              "How well the solution justifies why a borrower is ranked highly"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

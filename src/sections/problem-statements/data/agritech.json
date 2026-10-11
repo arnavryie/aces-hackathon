@@ -1,0 +1,90 @@
+{
+  "name": "Agritech",
+  "code": "AGRITECH",
+  "problems": [
+    {
+      "problemNum": "01",
+      "name": "Agricultural Market Intelligence & Dispatch Optimization",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Background"
+        },
+        {
+          "type": "paragraph",
+          "text": "Indian smallholder farmers frequently suffer distress sales at their nearest local APMC (Agricultural Produce Market Committee) mandi. Modal prices for perishable commodities, such as onions, tomatoes, and potatoes, fluctuate wildly across adjacent districts due to localized supply gluts, transport bottlenecks, and unseasonal rains."
+        },
+        {
+          "type": "heading",
+          "text": "The Bottleneck"
+        },
+        {
+          "type": "paragraph",
+          "text": "Currently, farmers lack real-time visibility into inter-market price differences and forward price trajectories. When facing a localized market glut, they cannot accurately determine if waiting a few days or transporting their harvest to a neighboring district will yield a higher net profit. Factoring in the cost of freight, fuel, and the rapid perishability of their crops is a complex mathematical challenge, frequently resulting in farmers selling produce below the cost of production."
+        },
+        {
+          "type": "heading",
+          "text": "The Objective"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build a system that continuously analyzes agricultural market economics and logistics. The system must ingest daily commodity market data and generate an optimal market realization score for a given farmer. It must evaluate local vs. regional markets and output a clear dispatch recommendation that mathematically balances predicted short-term market prices against variable transport distances, fuel costs, and commodity shelf-life degradation."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation Criteria"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Forecasting Accuracy: The system's ability to correctly anticipate short-term commodity price movements (3–7 days ahead) amidst noisy, non-stationary market data.",
+            "Optimization Realism: How accurately the dispatch recommendation accounts for real-world logistical constraints, including physical transit road distances, transit risks, and crop perishability.",
+            "System Resilience: System stability and functional output when handling irregular reporting cadences, missing data points, market holidays, or anomalous weather disruptions."
+          ]
+        }
+      ]
+    },
+    {
+      "problemNum": "02",
+      "name": "Micro-Climatic Crop Disease Early Warning System",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Background"
+        },
+        {
+          "type": "paragraph",
+          "text": "Indian farmers lose an estimated 15% to 25% of their crop yield every year to preventable fungal and bacterial diseases like Late Blight, Blast, and Pink Bollworm. Fungal sporulation and pest incubation are heavily governed by hyper-local micro-climatic triggers—specifically, sustained periods of high relative humidity combined with specific temperature windows."
+        },
+        {
+          "type": "heading",
+          "text": "The Bottleneck"
+        },
+        {
+          "type": "paragraph",
+          "text": "Current disease management is entirely reactive. Farmers typically apply expensive chemical fungicides or pesticides only after physical lesions and irreversible damage have already covered the foliage. They lack an early warning system capable of anticipating crop disease outbreaks before visible physical damage occurs. This lack of foresight results in delayed interventions, excessive chemical use, and massive crop loss."
+        },
+        {
+          "type": "heading",
+          "text": "The Objective"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build an agricultural health platform that diagnoses current crop health and predicts future epidemic spread. The system must be capable of evaluating raw visual evidence of crop conditions from the field and dynamically fusing that data with hyper-local environmental forecasts. The final output must be a structured, predictive advisory indicating whether current micro-climatic conditions will trigger rapid disease sporulation, instructing the farmer exactly when to apply treatments to prevent spread."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation Criteria"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Diagnostic Precision: The system's accuracy in identifying specific disease symptoms and crop types from raw, user-uploaded field imagery.",
+            "Multi-Variable Risk Modeling: The ability of the system to successfully fuse temporal weather patterns (such as relative humidity and temperature profiles) with baseline diagnostic data to compute a realistic secondary-infection risk curve.",
+            "Intervention Viability: The practical usability of the output advisory. The system must demonstrate calibrated confidence thresholds to prevent false chemical spray alarms and optimize treatment timing based on impending environmental shifts."
+          ]
+        }
+      ]
+    }
+  ]
+}

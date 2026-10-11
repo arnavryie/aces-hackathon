@@ -91,7 +91,7 @@
   outline-offset: 3px;
 }
 
-.problem-sample {
+.problem-domain-label {
   display: inline-block;
   font-size: 0.72em;
   letter-spacing: 0.08em;
@@ -129,6 +129,27 @@
 .problem-description li {
   margin: 7px 0;
 }
+
+.problem-criteria {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: .9em;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.problem-criteria th,
+.problem-criteria td {
+  padding: 10px 8px;
+  border: 1px solid #567b7c;
+  text-align: left;
+  vertical-align: top;
+}
+
+.problem-criteria th:first-child { width: 36%; }
+.problem-criteria thead { background: #608e9040; }
+.problem-criteria tbody th { font-weight: 600; }
 
 .problem-character {
   min-width: 0;

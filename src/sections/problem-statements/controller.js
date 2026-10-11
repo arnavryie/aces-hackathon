@@ -1,5 +1,6 @@
 import { domainList } from "./data.js";
 import { missionCharacters } from "./characters/index.js";
+import { renderProblemSections } from "./render-content.js";
 import { state } from "../../shared/state.js";
 import {
   aboutOverlay,
@@ -50,19 +51,12 @@ export function openProblemDetail(choiceIndex) {
   if (!problem) return;
 
   document.getElementById("problem-detail-title").textContent =
-    "Problem Statement " + (choiceIndex + 1) + ":";
+    "Problem Statement " + problem.problemNum + ":";
+  document.getElementById("problem-domain-label").textContent = domain.name;
   document.getElementById("problem-name").textContent = problem.name;
-  document.getElementById("problem-summary").textContent = problem.summary;
-  document.getElementById("problem-challenge").textContent = problem.challenge;
-  document.getElementById("problem-demo").textContent = problem.demo;
-
-  const list = document.getElementById("problem-deliverables");
-  list.replaceChildren(
-    ...problem.deliverables.map((text) => {
-      const item = document.createElement("li");
-      item.textContent = text;
-      return item;
-    }),
+  renderProblemSections(
+    document.getElementById("problem-sections"),
+    problem.sections,
   );
 
   const character = missionCharacters[state.activeDomain * 2 + choiceIndex];

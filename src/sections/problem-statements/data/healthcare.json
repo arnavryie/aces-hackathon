@@ -1,0 +1,142 @@
+{
+  "name": "Healthcare",
+  "code": "HEALTHCARE",
+  "problems": [
+    {
+      "problemNum": "01",
+      "name": "Real-Time Wearable Health Anomaly Radar",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Background"
+        },
+        {
+          "type": "paragraph",
+          "text": "Smartwatches and fitness bands produce a constant stream of body measurements such as heart rate, blood oxygen, activity, and skin temperature. Most of it is routine, and users receive so many alerts that they begin to ignore them. This “warning fatigue” means a genuinely dangerous event, such as a sudden cardiac spike or a drop in oxygen during sleep, can go unnoticed."
+        },
+        {
+          "type": "heading",
+          "text": "Challenge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build a Real-Time Wearable Health Anomaly Radar: a system that watches a continuous stream of health readings, learns what is normal for an individual, and raises an alert only when something is truly out of the ordinary."
+        },
+        {
+          "type": "heading",
+          "text": "Expected Capabilities"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Monitor a continuous, multi-signal stream of health readings, including heart rate, blood oxygen, activity level, and skin temperature.",
+            "Learn each person’s normal physiological baseline, without relying on pre-labelled examples of emergencies.",
+            "Detect significant deviations as they happen, including cases where several signals change together (for example, oxygen dropping while heart rate rises).",
+            "Alert immediately and clearly when a serious anomaly is found, while avoiding unnecessary alerts for harmless variation.",
+            "Notify the patient’s primary care doctor by producing a simulated automated message with the key details of the event.",
+            "Demonstrate the system through a live monitoring dashboard that includes a control for injecting an “Emergency Health Spike” (for example, heart rate jumping to 160 while the person is not moving)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Desired Outcome"
+        },
+        {
+          "type": "paragraph",
+          "text": "When an emergency event is injected, the system recognizes it within moments, shows a prominent red alert on screen, and generates a ready-to-send alert message for the patient’s doctor. Normal fluctuations do not trigger false alarms."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation Focus"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Area",
+            "What judges look for"
+          ],
+          "rows": [
+            [
+              "Detection accuracy",
+              "Whether real emergencies are caught and normal variation is not flagged"
+            ],
+            [
+              "Personal baseline",
+              "How well the system adapts to what is normal for the individual"
+            ],
+            [
+              "Multi-signal awareness",
+              "Whether it recognizes dangerous combinations, not just single out-of-range values"
+            ],
+            [
+              "Responsiveness",
+              "How quickly an injected event is detected and shown"
+            ],
+            [
+              "Alert quality",
+              "Clarity and usefulness of the on-screen alert and the doctor notification"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Live judging: A judge will use the injection control to observe how quickly and appropriately the system reacts."
+        }
+      ]
+    },
+    {
+      "problemNum": "02",
+      "name": "High-Efficiency Decoding of Genomic Regulatory Architecture",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Biological Context and the Problem"
+        },
+        {
+          "type": "paragraph",
+          "text": "In eukaryotic genomes, cellular function is governed by intricate regulatory codes embedded directly within DNA sequences. Beyond protein-coding regions, vast non-coding stretches dictate when, where, and how genes are expressed. Critical genomic landmarks—such as core promoters, transcription factor binding sites (TFBS), splice donor/acceptor junctions, and epigenetic histone marks—determine the operational state of a cell."
+        },
+        {
+          "type": "paragraph",
+          "text": "Identifying these functional signatures from raw sequencing reads is fundamental to understanding gene regulation, identifying disease-causing variants, and engineering synthetic biological circuits. However, biological syntax does not follow fixed-width rules. Regulatory motifs vary in length, exhibit degeneracies (wobble positions where multiple bases are functionally equivalent), and depend heavily on long-range contextual interactions spanning hundreds or thousands of base pairs."
+        },
+        {
+          "type": "heading",
+          "text": "The Bottleneck"
+        },
+        {
+          "type": "paragraph",
+          "text": "Traditional computational workflows process DNA by slicing nucleotide sequences (A,T,C,G) into rigid, overlapping chunks of fixed character lengths (such as continuous sliding windows of 5 or 6 base pairs). While straightforward to implement, this brute-force parsing strategy creates severe computational strain:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Combinatorial Data Inflation: Slicing every overlapping fragment artificially multiplies the data volume, causing memory overflow when scaling to multi-species genome assemblies.",
+            "Loss of Biological Grammar: Fixed-length slicing fractures natural biological motifs and fails to capture long-range dependencies where distant genomic segments interact with one another.",
+            "Compute Barrier: Processing multi-kilobase sequences with naive slicing requires high-end server clusters, making rapid exploratory genomics inaccessible on standard hardware."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The Objective"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build a pipeline that ingests raw nucleotide sequences of variable lengths (ranging from short 100-base-pair fragments to several thousand base pairs) and accurately predicts their biological functional class (such as promoter activity or regulatory binding potential)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your system must handle sequence data natively, identifying meaningful biological patterns and structural boundaries without relying on bloated, memory-exhaustive representations."
+        },
+        {
+          "type": "heading",
+          "text": "Tooling & AI Policy"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI Assistance Permitted: Participants are explicitly encouraged to use AI tools (such as Gemini, Claude, or ChatGPT) to rapidly acquire biological domain knowledge, research state-of-the-art sequence representations, and debug implementation workflows. Your architecture design, code integration, and pipeline validation must be your team’s own work."
+        }
+      ]
+    }
+  ]
+}

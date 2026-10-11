@@ -1,0 +1,90 @@
+{
+  "name": "Spacetech",
+  "code": "SPACETECH",
+  "problems": [
+    {
+      "problemNum": "01",
+      "name": "Orbital Conjunction & Space Traffic Risk Engine",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Background"
+        },
+        {
+          "type": "paragraph",
+          "text": "With the deployment of modern mega-constellations and the historical accumulation of space debris, Low Earth Orbit (LEO) has become critically congested. Satellites and cataloged space debris generate millions of potential close encounters (conjunctions) each week. Furthermore, space weather fluctuations—such as solar flares and coronal mass ejections—heat the upper atmosphere, causing sudden changes in atmospheric drag that render standard deterministic orbit tracking inaccurate."
+        },
+        {
+          "type": "heading",
+          "text": "The Bottleneck"
+        },
+        {
+          "type": "paragraph",
+          "text": "Satellite operators are inundated with a massive volume of proximity alerts and must constantly decide whether to expend precious, limited fuel on collision-avoidance maneuvers. Distinguishing harmless close passes from high-risk collision events is an overwhelming task for manual trajectory reviews, particularly when unpredictable atmospheric drag makes traditional deterministic orbit tracking unreliable."
+        },
+        {
+          "type": "heading",
+          "text": "The Objective"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build a high-throughput space traffic monitoring service that ingests real-time orbital coordinate data and space weather feeds. The system must autonomously propagate satellite trajectories across a multi-day forecast window to detect close approaches. It must generate a highly accurate collision probability score that actively accounts for orbital uncertainties caused by real-time atmospheric drag."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation Criteria"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Risk Scoring Precision: The ability of the system to accurately distinguish genuine high-risk conjunctions from false alarms, thereby minimizing unnecessary, fuel-wasting maneuvers.",
+            "Architectural Scalability: System latency and computational efficiency when calculating pairwise distances across thousands of fast-moving orbital objects without encountering massive computational bottlenecks.",
+            "Environmental Dynamic Modeling: How effectively the solution integrates real-time solar and space weather fluctuations to adjust for atmospheric drag decay in its orbital predictions."
+          ]
+        }
+      ]
+    },
+    {
+      "problemNum": "02",
+      "name": "Near-Real-Time Disaster Perimeter & Spread Forecasting",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Background"
+        },
+        {
+          "type": "paragraph",
+          "text": "Earth observation satellite constellations continuously capture multispectral telemetry of the planet. During rapid-onset natural disasters—such as active wildfires or severe flooding—understanding the exact geographic perimeter of the hazard and how environmental factors will dictate its movement is critical for safely deploying first responders."
+        },
+        {
+          "type": "heading",
+          "text": "The Bottleneck"
+        },
+        {
+          "type": "paragraph",
+          "text": "During an active crisis, field teams cannot wait for manual geospatial analyst reports, nor can they afford the time or bandwidth to download multi-gigabyte raw satellite images. Extracting actionable, low-latency intelligence from voluminous orbital observation streams and fusing it with local environmental variables is currently a severely delayed process, leaving responders without predictive intelligence when every minute counts."
+        },
+        {
+          "type": "heading",
+          "text": "The Objective"
+        },
+        {
+          "type": "paragraph",
+          "text": "Build an automated Earth observation analysis engine that continuously ingests real-time satellite imagery and thermal anomaly streams. The system must rapidly isolate and extract the exact geographic boundary of an active disaster (e.g., a burn scar or flood zone). It must then dynamically pair this current perimeter geometry with localized meteorological data to predict the short-term spread of the hazard over the next 6 to 12 hours."
+        },
+        {
+          "type": "heading",
+          "text": "Evaluation Criteria"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Boundary Extraction Accuracy: The precision with which the system can isolate and delineate the exact footprint of a disaster zone from complex, raw observation data streams.",
+            "Multi-Variable Spread Forecasting: The reliability of the hazard propagation forecast when fusing the current perimeter geometry with dynamic external variables such as wind vectors, relative humidity, and topographical gradients.",
+            "Data Pipeline Efficiency: The ability of the backend to process massive, multispectral data streams rapidly and compress the output into lightweight, actionable coordinate formats suitable for immediate tactical field deployment."
+          ]
+        }
+      ]
+    }
+  ]
+}
