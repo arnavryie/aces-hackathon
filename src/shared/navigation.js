@@ -70,7 +70,7 @@ export function choose(index, activate = false) {
     return;
   }
   if (activate && state.selected === 1) {
-    showNotice("Problem Statements");
+    openProblems();
     return;
   }
   if (activate && state.selected !== 0)
