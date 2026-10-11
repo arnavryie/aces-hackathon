@@ -177,7 +177,10 @@ export function triggerSelect() {
 }
 
 export function buttonAt(target) {
-  const button = target instanceof Element ? target.closest("button") : null;
+  const button =
+    target instanceof Element
+      ? target.closest("button, a.ps-download-btn, a.level-dl-btn")
+      : null;
   return button &&
     screen.contains(button) &&
     !button.disabled &&

@@ -17,6 +17,29 @@ import {
 import { choose, setHomeInert } from "../../shared/navigation.js";
 import { syncMusicState } from "../../shared/audio.js";
 
+export function getProblemDocxInfo(domainIndex, choiceIndex) {
+  const domain = domainList[domainIndex];
+  if (!domain) return null;
+  const problem = domain.problems?.[choiceIndex];
+  if (problem?.docxFile && problem?.docxPath) {
+    return { filename: problem.docxFile, path: problem.docxPath };
+  }
+  const domainNameMap = {
+    fintech: "PS Fintech",
+    legal: "PS Legal",
+    healthcare: "PS Healthcare",
+    spacetech: "PS SpaceTech",
+    agritech: "PS AgriTech",
+  };
+  const key = (domain.name || domain.code || "").toLowerCase();
+  const prefix = domainNameMap[key] || `PS ${domain.name}`;
+  const filename = `${prefix} - Problem Statement ${choiceIndex + 1}.docx`;
+  return {
+    filename,
+    path: `/assets/ps-docs/${encodeURIComponent(filename)}`,
+  };
+}
+
 export function openLevelSelect(domainIndex) {
   const domain = domainList[domainIndex];
   if (!domain) return;
@@ -30,6 +53,19 @@ export function openLevelSelect(domainIndex) {
 
   const ps1Name = document.getElementById("level-ps-1-name");
   if (ps1Name) ps1Name.textContent = domain.problems[1]?.name || "";
+
+  const dl0 = getProblemDocxInfo(domainIndex, 0);
+  const dl1 = getProblemDocxInfo(domainIndex, 1);
+  const dlBtn0 = document.getElementById("level-ps-0-download");
+  const dlBtn1 = document.getElementById("level-ps-1-download");
+  if (dlBtn0 && dl0) {
+    dlBtn0.href = dl0.path;
+    dlBtn0.setAttribute("download", dl0.filename);
+  }
+  if (dlBtn1 && dl1) {
+    dlBtn1.href = dl1.path;
+    dlBtn1.setAttribute("download", dl1.filename);
+  }
 
   levelSelectModal.hidden = false;
   const firstLevelBtn = levelSelectModal.querySelector(".level-btn");
@@ -58,6 +94,13 @@ export function openProblemDetail(choiceIndex) {
     document.getElementById("problem-sections"),
     problem.sections,
   );
+
+  const downloadInfo = getProblemDocxInfo(state.activeDomain, choiceIndex);
+  const downloadBtn = document.getElementById("problem-download-btn");
+  if (downloadBtn && downloadInfo) {
+    downloadBtn.href = downloadInfo.path;
+    downloadBtn.setAttribute("download", downloadInfo.filename);
+  }
 
   const character = missionCharacters[state.activeDomain * 2 + choiceIndex];
   const characterImage = document.getElementById("problem-character-image");

@@ -109,9 +109,14 @@ document.addEventListener("keydown", (event) => {
       if (event.key === "Home") closeProblems();
     } else if (event.key === "Tab") {
       event.preventDefault();
-      const close = problemDetail.querySelector(".ps-close");
-      const content = problemDetail.querySelector(".problem-description");
-      (document.activeElement === close ? content : close).focus();
+      const focusables = Array.from(
+        problemDetail.querySelectorAll(".ps-close, .ps-download-btn, .problem-description"),
+      );
+      const idx = focusables.indexOf(document.activeElement);
+      const next = event.shiftKey
+        ? focusables[(idx - 1 + focusables.length) % focusables.length]
+        : focusables[(idx + 1) % focusables.length];
+      next?.focus();
     }
     return;
   }
@@ -201,6 +206,12 @@ psCards.forEach((card) =>
 levelButtons.forEach((btn) =>
   btn.addEventListener("click", () => {
     openProblemDetail(Number(btn.dataset.psChoice));
+  }),
+);
+
+document.querySelectorAll(".level-dl-btn").forEach((btn) =>
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
   }),
 );
 

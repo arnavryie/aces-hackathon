@@ -272,6 +272,76 @@
   gap: clamp(10px, 1.5vh, 16px);
 }
 
+.level-btn-row {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(8px, 1.2vw, 12px);
+  width: 100%;
+}
+
+.level-btn-row .level-btn {
+  flex: 1;
+  min-width: 0;
+}
+
+.level-dl-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px clamp(10px, 1.3vw, 15px);
+  background: linear-gradient(180deg, #4ef2d6 0%, #2bd5ba 100%);
+  color: #061e20;
+  text-decoration: none;
+  border: clamp(2.5px, 0.4vw, 4px) solid #0b2225;
+  border-radius: clamp(14px, 1.8vw, 20px);
+  box-shadow: 0 4px 0 #182a2d;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s,
+    filter 0.15s;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.level-dl-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 #182a2d,
+    0 0 14px rgba(66, 228, 202, 0.6);
+  filter: brightness(1.08);
+}
+
+.level-dl-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #182a2d;
+}
+
+.level-dl-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.level-dl-btn img {
+  width: clamp(15px, 1.6vw, 20px);
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.level-dl-text {
+  font: 700 clamp(10px, 0.9vw, 12px)/1 "DM Sans", sans-serif;
+  letter-spacing: 0.6px;
+  color: #061e20;
+}
+
+.level-dl-btn svg {
+  color: #061e20;
+}
+
 .level-btn {
   display: flex;
   align-items: center;
@@ -431,6 +501,24 @@
 
   .level-btn-name {
     font-size: 11px;
+  }
+
+  .level-btn-row {
+    gap: 6px;
+  }
+
+  .level-dl-btn {
+    padding: 6px 8px;
+    border-radius: 12px;
+    border-width: 2px;
+  }
+
+  .level-dl-btn img {
+    width: 14px;
+  }
+
+  .level-dl-text {
+    font-size: 9px;
   }
 }
 

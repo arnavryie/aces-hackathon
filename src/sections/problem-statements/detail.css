@@ -40,14 +40,113 @@
   min-height: 0;
 }
 
-.problem-copy-column h2 {
+.problem-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 1.5vw, 16px);
+  margin: 0 0 clamp(8px, 1.2vh, 12px);
+  flex-wrap: wrap;
+}
+
+.problem-header-row h2 {
   font:
-    400 clamp(27px, 4.2vh, 52px)/1.1 Joffrey,
+    400 clamp(24px, 4vh, 48px)/1.1 Joffrey,
     sans-serif;
   letter-spacing: 1px;
-  margin: 0 0 12px;
+  margin: 0;
   color: #f2f7f5;
   text-align: left;
+}
+
+.ps-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(8px, 1vw, 12px);
+  padding: clamp(6px, 0.9vh, 10px) clamp(12px, 1.4vw, 18px);
+  background: linear-gradient(180deg, #4ef2d6 0%, #2bd5ba 55%, #18b39a 100%);
+  color: #051a1c;
+  text-decoration: none;
+  border: clamp(2.5px, 0.35vw, 3.5px) solid #0b2225;
+  border-radius: clamp(12px, 1.6vw, 18px);
+  box-shadow:
+    0 4px 0 #081a1c,
+    0 0 16px rgba(66, 228, 202, 0.45);
+  font: 400 clamp(15px, 1.8vw, 22px)/1 Joffrey, sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.15s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.15s;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.ps-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 #081a1c,
+    0 0 24px rgba(66, 228, 202, 0.75);
+  filter: brightness(1.06);
+}
+
+.ps-download-btn:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 #081a1c,
+    0 0 12px rgba(66, 228, 202, 0.5);
+}
+
+.ps-download-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.ps-download-crewmate-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.ps-download-crewmate {
+  width: clamp(16px, 1.8vw, 22px);
+  height: auto;
+  image-rendering: pixelated;
+  transition: transform 0.2s ease;
+}
+
+.ps-download-btn:hover .ps-download-crewmate {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.ps-download-text {
+  font-weight: 400;
+  color: #061e20;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.ps-download-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #092225;
+  color: #42e4ca;
+  font: 700 clamp(10px, 0.9vw, 12px)/1 "DM Sans", sans-serif;
+  letter-spacing: 0.8px;
+  border-radius: 6px;
+  border: 1px solid #1f4f53;
+  box-shadow: inset 0 0 4px rgba(66, 228, 202, 0.2);
+}
+
+.ps-download-arrow {
+  color: #072124;
+  transition: transform 0.2s ease;
+}
+
+.ps-download-btn:hover .ps-download-arrow {
+  transform: translateY(2px);
 }
 
 .problem-description {
@@ -196,8 +295,35 @@
     padding: 12px 9px 18px;
   }
 
-  .problem-copy-column h2 {
-    font-size: 25px;
+  .problem-header-row {
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .problem-header-row h2 {
+    font-size: 22px;
+  }
+
+  .ps-download-btn {
+    padding: 5px 10px;
+    font-size: 13px;
+    gap: 6px;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
+  .ps-download-crewmate {
+    width: 14px;
+  }
+
+  .ps-download-badge {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+
+  .ps-download-arrow {
+    width: 14px;
+    height: 14px;
   }
 
   .problem-description {
